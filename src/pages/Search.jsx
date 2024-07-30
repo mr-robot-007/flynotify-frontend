@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { IoArrowBackSharp } from "react-icons/io5";
 import { formatDate } from "../helpers/helper";
 import { useMoveBack } from "../hooks/useMoveBack";
+import Header from "../ui/components/Header";
+import toast, { Toaster } from "react-hot-toast";
 
 function Dashboard() {
     const [id, setId] = useState("");
@@ -14,7 +16,6 @@ function Dashboard() {
 
     async function handleSubmit(e){
         setError(null);
-        setFlightData(null);
         e.preventDefault();
         if(id == "" ){
             setError("Please fill all the fields");
@@ -29,6 +30,7 @@ function Dashboard() {
             {
                 console.log(e.response.data.detail);
                 setError(e.response.data.detail);
+                toast.error(e.response.data.detail);
             }
         }
     }
@@ -41,7 +43,7 @@ function Dashboard() {
         async function fetchSampleData(){
             try {
                 const {data ,error} = await axios.get(`${baseurl}/flights/6E2341`);
-                console.log(data);
+                // console.log(data);
                 setFlightData(data);
             }
             catch(e)
@@ -62,11 +64,8 @@ function Dashboard() {
     return (
         <div className="h-dvh w-full  bg-[#e7eef4] flex items-center justify-center m-auto">
                 <div className="bg-white rounded-xl sm:max-w-[380px] sm:max-h-[700px] h-[90%] w-[80%] m-4 ">
-                    <div className=" flex items-center mt-4">
-                    <IoArrowBackSharp className="text-2xl ml-2" onClick={moveBack}/>
-                    <h2 className="text-center font-bold text-xl ml-[25%]">Seach Flight</h2>
-                    </div>
-                    {error && <p className="text-center  text-sm text-red-500 mt-2">{error}</p>}
+                    <Header title="Search Flights" moveBack={moveBack}/>
+                    <Toaster/>
                     <form>  
                         <div className="flex flex-col items-center  gap-4 mt-5">
                             <input className="border border-gray-300 bg-[#e7eef4]   w-[85%] rounded-lg p-2 " type="email"  placeholder="6E 2341" onChange={(e) => setId(e.target.value)} />

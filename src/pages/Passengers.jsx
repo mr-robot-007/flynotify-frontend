@@ -96,10 +96,10 @@ function Passengers() {
               <label htmlFor="passengers" className="font-semibold">
                 Passengers:
               </label>
-              <ul className="border border-gray-500 text-gray-600 font-semibold bg-[#F2F2F2] rounded-lg p-2 ">
+              <ul className="border border-gray-500 text-gray-600 text-sm font-semibold bg-[#F2F2F2] rounded-lg p-2 overflow-hidden ">
                 {flightData?.passenger_contacts?.map((contact, i) => (
                   <li key={i}>
-                    {i + 1} . {contact.value}
+                    {i + 1}. {contact.value}
                   </li>
                 ))}
               </ul>

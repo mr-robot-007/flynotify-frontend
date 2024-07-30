@@ -41,7 +41,7 @@ function Login() {
         <div className="h-dvh w-full  bg-[#e7eef4] flex items-center justify-center m-auto">
                 <Toaster/>
                 <div className="bg-white rounded-xl sm:max-w-[380px] sm:max-h-[700px] h-[90%] w-[80%] m-4 ">
-                    <h1 className="text-center font-bold text-3xl py-4 rounded-t-lg bg-[#2194F2] text-white">FlyNotify</h1>
+                    <h1 className="text-center font-bold text-2xl py-4 rounded-t-lg bg-[#2194F2] text-white">FlyNotify</h1>
                     <h2 className="text-center font-bold text-xl mt-4">Login in to your account</h2>
                     <form>  
                         <div className="flex flex-col items-center  gap-4 mt-5">
