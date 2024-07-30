@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useMoveBack } from "../hooks/useMoveBack";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import Header from "../ui/components/Header";
 
 function Passengers() {
   const { flightId } = useParams("");
@@ -57,13 +58,12 @@ function Passengers() {
         }
       );
       console.log(formData);
-      if(data.detail == 'Email Already Exists'){
-        toast('Email Already Exists.')
+      if (data.detail == "Email Already Exists") {
+        toast("Email Already Exists.");
+      } else {
+        toast.success("Passenger Added successfully!");
+        navigate("/dashboard");
       }
-      else {
-          toast.success("Passenger Added successfully!");
-            navigate("/dashboard");
-        }
     } catch (e) {
       toast.error("Something went wrong.");
       console.log(e);
@@ -73,14 +73,7 @@ function Passengers() {
 
   return (
     <>
-      <div className="text-center font-bold text-2xl py-4 rounded-t-lg  flex justify-between bg-[#2194F2] text-white">
-        <IoArrowBackSharp
-          className="text-3xl ml-4 p-1 hover:bg-white hover:text-[#2194F2] hover:rounded-full"
-          onClick={moveBack}
-        />
-        <h2 className="text-center font-bold text-xl ">Passengers</h2>
-        <IoIosLogOut className="text-3xl mr-4 p-1 hover:rounded-full hover:bg-white hover:text-[#2194F2] " />
-      </div>
+      <Header title="Passengers" moveBack={moveBack} />
 
       <div className=" h-full  mx-4 mb-4 overflow-scroll no-scrollbar">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -100,14 +93,16 @@ function Passengers() {
             </div>
 
             <div className="flex flex-col gap-2 w-[85%]">
-                <label htmlFor="passengers" className="font-semibold">
-                    Passengers:
-                </label>
-                <ul className="border border-gray-500 text-gray-600 font-semibold bg-[#F2F2F2] rounded-lg p-2 ">
-                    {flightData?.passenger_contacts?.map((contact, i) => (
-                        <li key={i}>{i+1} . {contact.value}</li>
-                    ))}
-                </ul>
+              <label htmlFor="passengers" className="font-semibold">
+                Passengers:
+              </label>
+              <ul className="border border-gray-500 text-gray-600 font-semibold bg-[#F2F2F2] rounded-lg p-2 ">
+                {flightData?.passenger_contacts?.map((contact, i) => (
+                  <li key={i}>
+                    {i + 1} . {contact.value}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="flex flex-col gap-2 w-[85%]">

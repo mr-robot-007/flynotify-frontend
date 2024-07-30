@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useMoveBack } from "../hooks/useMoveBack";
 import { useForm } from "react-hook-form"
 import {toast} from "react-hot-toast";
+import Header from "../ui/components/Header";
 
 function Form() {
   // const  flightId  = "6E2341";
@@ -76,11 +77,10 @@ function Form() {
 
   return (
     <>
-      <div className="text-center font-bold text-2xl py-4 rounded-t-lg  flex justify-between bg-[#2194F2] text-white">
-        <IoArrowBackSharp className="text-3xl ml-4 p-1 hover:bg-white hover:text-[#2194F2] hover:rounded-full" onClick={moveBack} />
-        <h2 className="text-center font-bold text-xl ">Update Flight Status</h2>
-        <IoIosLogOut className="text-3xl mr-4 p-1 hover:rounded-full hover:bg-white hover:text-[#2194F2] "  />
-      </div>
+      <Header
+        title="Update Flight Status"
+        moveBack={() => navigate("/")}
+      />
 
       <div className=" h-full  mx-4 mb-4 overflow-scroll no-scrollbar">
       <form onSubmit={handleSubmit(onSubmit)}>  

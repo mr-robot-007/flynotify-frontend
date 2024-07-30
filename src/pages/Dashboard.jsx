@@ -5,6 +5,7 @@ import axios from "axios";
 import DashboardItem from "../ui/components/DashboardItem";
 import { logout } from "../services/apiAuth";
 import { useNavigate } from "react-router-dom";
+import Header from "../ui/components/Header";
 function Dashboard() {
   const [flights, setFlights] = useState([]);
   const navigate = useNavigate();
@@ -39,13 +40,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className="text-center font-bold text-2xl py-4 rounded-t-lg  flex bg-[#2194F2] text-white ">
-        <h2 className="text-center font-bold text-xl ml-[40%]">Flights</h2>
-        <IoIosLogOut
-          className="text-3xl ml-[28%] p-1 hover:bg-white hover:text-[#2194F2] hover:rounded-full"
-          onClick={handleLogout}
-        />
-      </div>
+      <Header title="Flights" moveBack={null} />
 
       <div className=" h-full  mx-4 mb-4 overflow-scroll no-scrollbar mt-4">
         <ul className="flex flex-col gap-3">

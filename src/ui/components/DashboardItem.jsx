@@ -4,12 +4,12 @@ import { formatDate } from "../../helpers/helper";
 
 function DashboardItem({flight_id,scheduled_departure}) {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-2 ">
       <div className="text-sm">
         <p className="font-semibold">{flight_id}</p>
         <p>{formatDate(scheduled_departure.substring(0,19))}</p>
       </div>
-      <Link to={`/flights/${flight_id}`} className="bg-[#e7eef4] px-3 py-2 rounded-md font-semibold">
+      <Link to={`/flights/${flight_id}`} className="bg-[#e7eef4] px-3 py-2 rounded-md font-semibold hover:bg-[#68737e] hover:text-white ">
         View
       </Link>
     </div>

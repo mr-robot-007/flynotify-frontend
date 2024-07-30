@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './ui/components/ProtectedRoute';
 import Form from './pages/Form';
 import Passengers from './pages/Passengers';
+import ForgetPassword from './pages/ForgetPassword';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/passengers/:flightId" element = {<Passengers/>} />
       </Route>
       <Route path="login" element = {<Login/>} />
+      <Route path="forgotpassword" element = {<ForgetPassword/>} />
       <Route path="search" element = {<Search/>} />
 
     </Routes>

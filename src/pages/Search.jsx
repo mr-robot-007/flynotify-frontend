@@ -83,8 +83,8 @@ function Dashboard() {
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Status: </span> <span className={`py-1 px-2 rounded-xl text-white ${statusColor[flightData?.status] || 'bg-green-500'}`}>{flightData?.status}</span></p>
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Arival Gate: </span>{flightData?.arrival_gate}</p>
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Departure Gate: </span>{flightData?.departure_gate}</p>
-                            <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Departute: </span>{formatDate(flightData?.scheduled_departure)}</p>
-                            <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Arrival: </span>{formatDate(flightData?.scheduled_arrival)}</p>
+                            <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Departute: </span>{formatDate(flightData?.scheduled_departure.substr(0,19))}</p>
+                            <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Arrival: </span>{formatDate(flightData?.scheduled_arrival.substr(0,19))}</p>
                         </div>
                     </div>
                     )}
