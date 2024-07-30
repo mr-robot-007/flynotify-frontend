@@ -19,6 +19,10 @@ Here're some of the project's best features:
 ![Screenshot 2024-07-30 222046](https://github.com/user-attachments/assets/b8505baa-de0e-4760-b107-de761fd2cafd)
 ![Screenshot 2024-07-30 222111](https://github.com/user-attachments/assets/ea60ee30-6d41-40fd-9e97-e62aebeb10e8)
 
+![Screenshot 2024-07-30 222913](https://github.com/user-attachments/assets/e1014923-533f-4fb6-8b86-6dd371dd0336)
+![Screenshot 2024-07-30 230211](https://github.com/user-attachments/assets/93f67c87-bfda-4943-a24a-6df56d3cb079)
+
+
 ## Prerequisites
 - Node.js and npm installed
 ## Installation Steps
