@@ -9,8 +9,17 @@ Here're some of the project's best features:
 *   Passenger Management: Admins can effortlessly add new passengers to the system by providing their email addresses.
 *   Comprehensive Flight Overview: Admins have a clear view of a list encompassing all flights enabling efficient management.
 
-## Prerequisites
+## Screenshots
+![Screenshot 2024-07-30 221849](https://github.com/user-attachments/assets/64348ef0-37f2-4690-a867-f2aeffe8aefd)
+![Screenshot 2024-07-30 221917](https://github.com/user-attachments/assets/3b789aee-daab-4b10-861e-86137aa1485f)
 
+![Screenshot 2024-07-30 222028](https://github.com/user-attachments/assets/278f2c9b-d5ec-4de8-89c0-b9d6af0057a5)
+![Screenshot 2024-07-30 222039](https://github.com/user-attachments/assets/88ab5769-2d4e-4ba6-a487-fee6203b6b7e)
+
+![Screenshot 2024-07-30 222046](https://github.com/user-attachments/assets/b8505baa-de0e-4760-b107-de761fd2cafd)
+![Screenshot 2024-07-30 222111](https://github.com/user-attachments/assets/ea60ee30-6d41-40fd-9e97-e62aebeb10e8)
+
+## Prerequisites
 - Node.js and npm installed
 ## Installation Steps
 
@@ -40,6 +49,10 @@ Use the deployed backend URL
 If running the backend locally, use this url
 - VITE_BACKEND_URL=http://127.0.0.1:8000
 ```
+
+## Backend Repo
+https://github.com/mr-robot-007/flynotify-backend
+
 ## Running the Project
 ```
 npm run dev
