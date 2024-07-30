@@ -9,6 +9,7 @@ function Login() {
     const [isloading, setIsloading] = useState(false);
     const navigate = useNavigate();
     const baseurl = import.meta.env.VITE_BACKEND_URL;
+    console.log(baseurl);
     async function handleSubmit(e){
         setIsloading(true);
         e.preventDefault();
