@@ -32,7 +32,7 @@ function ForgetPassword() {
             }
             catch(e)
             {
-                toast.error(e.response.data.detail)
+                toast.error(e.response.data.message)
                 setIsloading(false);
             }
         }
