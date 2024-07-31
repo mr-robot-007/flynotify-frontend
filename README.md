@@ -46,9 +46,11 @@ npm install
 ```
 ## Configuration
 
-
+Create a .env file and add this variable
 ```
-Use the deployed backend URL
+Use the deployed backend URL (whichever works)
+- VITE_BACKEND_URL=http://13.127.0.17:8000
+Or 
 - VITE_BACKEND_URL=http://34.100.166.141:8000
 If running the backend locally, use this url
 - VITE_BACKEND_URL=http://127.0.0.1:8000
