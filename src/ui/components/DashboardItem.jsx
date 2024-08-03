@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom";
 import { formatDate } from "../../helpers/helper";
 
-function DashboardItem({flight_id,scheduled_departure}) {
+function DashboardItem({flight_id,scheduled_departure, search_flight}) {
   return (
-    <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-2 ">
+    <div className={`flex items-center justify-between border-b-gray-300 border-b-2 pb-2 ${search_flight=='search' ? "w-[85%]" : ""} ` }>
       <div className="text-sm">
         <p className="font-semibold">{flight_id}</p>
         <p>{formatDate(scheduled_departure.substring(0,19))}</p>

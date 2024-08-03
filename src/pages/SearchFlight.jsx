@@ -15,24 +15,7 @@ function SearchFlight() {
   const [options, setOptions] = useState([]);
   const baseurl = import.meta.env.VITE_BACKEND_URL;
   // const locations = ['Delhi','Dehradun','New Delhi','Chandigarh','Gujrat','Gwalior','Jaipur','Kota','Lucknow','Mumbai','Pune','Rajasthan','Surat','Udaipur','Varanasi','Vishakhapatnam']
-  const optionsArray = [
-    { value: "Delhi", label: "Delhi" },
-    { value: "Dehradun", label: "Dehradun" },
-    { value: "New Delhi", label: "New Delhi" },
-    { value: "Chandigarh", label: "Chandigarh" },
-    { value: "Gujrat", label: "Gujrat" },
-    { value: "Gwalior", label: "Gwalior" },
-    { value: "Jaipur", label: "Jaipur" },
-    { value: "Kota", label: "Kota" },
-    { value: "Lucknow", label: "Lucknow" },
-    { value: "Mumbai", label: "Mumbai" },
-    { value: "Pune", label: "Pune" },
-    { value: "Rajasthan", label: "Rajasthan" },
-    { value: "Surat", label: "Surat" },
-    { value: "Udaipur", label: "Udaipur" },
-    { value: "Varanasi", label: "Varanasi" },
-    { value: "Vishakhapatnam", label: "Vishakhapatnam" },
-  ];
+
   const handleChange = (option) => {
     setSelectedOption(option);
     console.log(`Option selected:`, option);
@@ -101,10 +84,10 @@ function SearchFlight() {
         <ul className="flex flex-col gap-3 mt-4 w-full items-center">
           {flights.length == 0 ? (
             <li className="text-center">
-              No Flights Found
+              Search flight by Departure
             </li>
           ) : (
-            flights.map((flight, i) => <DashboardItem key={i} {...flight} />)
+            flights.map((flight, i) => <DashboardItem key={i} {...flight} search_flight="search" />)
           )}
         </ul>
       </div>
