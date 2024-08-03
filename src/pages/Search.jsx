@@ -84,6 +84,7 @@ function Dashboard() {
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Departure Gate: </span>{flightData?.departure_gate}</p>
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Departute: </span>{formatDate(flightData?.scheduled_departure.substr(0,19))}</p>
                             <p className="text-[#73787c]"><span className="font-semibold text-black">Scheduled Arrival: </span>{formatDate(flightData?.scheduled_arrival.substr(0,19))}</p>
+                            <p className="text-[#73787c]"><span className="font-semibold text-black">Departure: </span>{flightData?.departure}</p>
                         </div>
                     </div>
                     )}

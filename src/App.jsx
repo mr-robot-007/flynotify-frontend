@@ -10,6 +10,7 @@ import ProtectedRoute from './ui/components/ProtectedRoute';
 import Form from './pages/Form';
 import Passengers from './pages/Passengers';
 import ForgetPassword from './pages/ForgetPassword';
+import SearchFlight from './pages/SearchFlight';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,6 +41,7 @@ function App() {
       <Route path="login" element = {<Login/>} />
       <Route path="forgotpassword" element = {<ForgetPassword/>} />
       <Route path="search" element = {<Search/>} />
+      <Route path="searchflight" element = {<SearchFlight/>} />
 
     </Routes>
     </BrowserRouter>

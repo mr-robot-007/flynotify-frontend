@@ -51,6 +51,8 @@ function Login() {
                             <button className=" bg-[#2194F2] text-white text-sm rounded-xl p-2 w-[85%] mt-3" onClick={handleSubmit} disabled={isloading} >{isloading ? "Loading..." : "Login"}</button>
                             or
                             <button className=" bg-[#2194F2] text-white text-sm rounded-xl p-2 w-[85%]" onClick={() => navigate("/search")}>Check Flight Status</button>
+                            or
+                            <button className=" bg-[#2194F2] text-white text-sm rounded-xl p-2 w-[85%]" onClick={() => navigate("/searchflight")}>Search Flights</button>
                         </div>
                     </form>
                 </div>
